@@ -1,0 +1,87 @@
+.projects-section{
+    margin: 3rem 5rem;
+    @include breakpoint-down(small){
+        margin: 3rem 2rem;
+    }
+    .title-container{
+        margin-bottom: 4rem;
+
+        h1{
+            text-align: center;
+        }
+    }
+}
+
+.projects-container-1{
+    h1{
+        margin-bottom: 3rem;
+        a{
+            color: $Dark-Blue;
+            text-decoration: underline;
+            text-decoration-style: wavy;
+            @media (hover: hover) and (pointer: fine){
+                &:hover{
+                    color: $Violet;
+                }
+            }
+        }
+
+        @include breakpoint-down(medium){
+            text-align: center;
+        }
+    }
+}
+
+.projects-container-2{
+    @extend .projects-container-1;
+    h1{
+        margin: 4rem 0;
+    }
+}
+  .project-cards-container{
+    gap: 74px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    
+    .card{
+        height: 400px;
+        border-radius: 6px;
+        position: relative;
+        display: grid;
+        grid-template-rows: 65% auto;
+        border: 3px solid #d2d2d2;
+        cursor: pointer;
+        transition: all 200ms;
+        background: white;
+        -webkit-tap-highlight-color: transparent;
+
+        &:active{
+            transform: scale(.98);
+        }
+
+        &_text{
+            @include flex-box(column, flex-start, flex-start);
+            padding: 1rem 2rem;
+            gap: 12px;
+        }
+
+        @media (hover: hover) and (pointer: fine){
+            &:hover{
+                transform: scale(1.02);
+            }
+        }
+
+        &_image{
+            background-image: url(../images/desktop-preview.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: top center;
+        }
+
+        &_title{
+            font-size: 25px;
+            font-weight: 400;
+        }
+    }
+  }
+

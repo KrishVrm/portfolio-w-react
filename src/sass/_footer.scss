@@ -1,0 +1,7 @@
+footer {
+    @include flex-center(row);
+    background: $Dark-Blue;
+    padding: 1.5rem;
+    color: white;
+    width: 100%;
+}

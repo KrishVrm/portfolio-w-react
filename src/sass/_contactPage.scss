@@ -1,0 +1,92 @@
+.contactPage-container{
+    // @include flex-box(column, flex-start, center);
+    margin: 3rem 5rem;
+    @include breakpoint-down(medium){
+        margin: 3rem 2rem;
+    }
+    gap: 3rem;
+
+    .title_container{
+        margin: 3rem 0; 
+        @include flex-center(column);
+        @include breakpoint-down(medium){
+            text-align: center;
+        }
+    }
+
+
+    
+
+    .form-bigContainer{
+        @include flex-box(column, center, center);
+        gap: 3rem;
+
+        @include breakpoint-down(medium){
+            flex-direction: column;
+            justify-content: flex-start;
+            row-gap: 3rem;
+        }
+
+        .between-line{
+            width: 2rem;
+            background-color: $Dark-Blue;
+            height: 25rem;
+            width: 6px;
+            position: relative;
+            height: 4px;
+            width: 22rem;
+            &::before{
+                content: 'OR';
+                font-size: 20px;
+                z-index: 3;
+                background: $Dark-Blue;
+                color: white;
+                border-radius: 150px;
+                width: 4rem;
+                height: 4rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                @include flex-center(row);
+            }
+
+        }
+    }
+
+    .social-media-icons-container{
+        @include flex-box(column, center, flex-start);
+        gap: 1rem; 
+
+        .social-media-icons{
+            @include flex-box(row, center, center);
+            gap: 6.5rem;
+        }
+
+        .ico{
+            @include flex-box(row, center, center);
+            gap: .5rem;
+
+        }
+        a{
+            color: $Dark-Blue;
+            transition: all 250ms;
+            @media (hover: hover) and (pointer: fine){
+                &:hover{
+                    color: $Violet;
+                }
+            }
+        }
+    }
+
+    .form-container{
+        @include flex-box(column, center, flex-start);
+        gap: 1rem;
+        position: relative;
+
+        button{
+            background: $Dark-Blue;
+        }
+    } 
+}
+

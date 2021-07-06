@@ -1,0 +1,76 @@
+.testimonial {
+    @include flex-box(column, center, center);
+    gap: 2rem;
+    margin: 7rem 5rem;
+    @include breakpoint-down(medium) {
+      margin: 7rem 2rem;
+    }
+
+    .title-container{
+        @include flex-box(column, center, center);
+        gap: 5px;
+    }
+    .cards_container {
+    //   @include flex-box(row, center, center);
+    //   flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 2rem;
+    @include breakpoint-down(medium){
+        grid-template-columns: none;
+        grid-template-rows: auto auto auto;
+    }
+
+    }
+  
+    .img1 {
+      background: url(../SVGs/star-solid.svg);
+    }
+    .img2 {
+        background: url(../SVGs/star-solid.svg);
+    }
+    .img3 {
+        background: url(../SVGs/star-solid.svg);
+    }
+  
+    .card {
+
+      @include flex-box(column, start, center);
+      text-align: center;
+      gap: 0.8rem;
+      &_image {
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 1.6rem;
+        width: 3.5rem;
+      }
+    }
+  }
+  
+  .hide_for_desktop {
+    @include breakpoint-up(large) {
+      display: none;
+    }
+  }
+  
+  .hide_for_mobile {
+    @include breakpoint-down(medium) {
+      display: none;
+    }
+  }
+  
+  .mobile-testimonial {
+    .cards_container {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+  
+    .hide {
+      display: none;
+    }
+  }
+  
+  
+  

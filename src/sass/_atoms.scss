@@ -1,0 +1,112 @@
+//$ BUTTONS-STYLING
+.cta {
+    color: white;
+    background: $Violet;
+    border-radius: 6px;
+    padding: 11px 1.7rem;
+    transition: all 0.25s;
+    @media (hover: hover) and (pointer: fine){
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  
+  .primary-btn {
+    @extend .cta;
+    background: white;
+  }
+  
+  //$ INPUT-STYLING
+  .primary-input, textarea {
+    padding: 10px 12px;
+    border-radius: 6px;
+    width: 22rem;
+    background: none;
+    border: 4px solid $Dark-Blue;
+    color: $Dark-Blue;
+    caret-color: $Violet;
+  }
+  
+  textarea{
+    resize: none;
+    outline: none;
+  }
+  //$ HEADINGS-STYLING
+  .headings {
+    color: $Dark-Blue;
+    font-weight: 700;
+    &_primary {
+      font-size: 40px;
+    }
+    &_secondary {
+      font-size: 30px;
+    }
+    &_tertiary {
+      font-size: 17px;
+      @include breakpoint-down(medium) {
+        font-size: 17px;
+      }
+    }
+  }
+  
+  //$ LIGHT-FONT PARAGRAPHS
+  .light-content {
+    font-weight: 400;
+    color: $Dark-Blue;
+    opacity: .8;
+    font-size: 16px;
+    line-height: 21px;
+  
+    @include breakpoint-down(medium) {
+      width: 84vw;
+      line-height: 21px;
+      text-align: center;
+    }
+  }
+  
+  //$ ANCHOR-LINKS STYLING
+  .links {
+    cursor: pointer;
+    font-size: 16px;
+    color: $Dark-Blue;
+    font-weight: 500;
+    position: relative;
+    transition: all 250ms;
+    &:hover {
+      &::before{
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        width: 100%;
+        height: 2px;
+        background: $Violet;
+      }
+    }
+  }
+  .activeLink{
+    color: #000;
+    ::before{
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      width: 100%;
+      height: 2px;
+      background: $Violet;
+    }
+  }
+
+  .logo{
+    color: $Dark-Blue;
+  }
+  
+  // //$ SVG ICONS
+  // .svg-icons {
+  //   cursor: pointer;
+  //   &:hover {
+  //     path {
+  //       // fill: $Bright-Red;
+  //     }
+  //   }
+  // }
+  

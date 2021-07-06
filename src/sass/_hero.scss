@@ -1,0 +1,66 @@
+.hero {
+    @include breakpoint-down(medium) {
+      @include flex-box(column, center, center);
+      margin: -1rem 2rem;
+    }
+    @include flex-box(row, space-between, center);
+    margin: 0rem 5rem;
+    &_left {
+      width: 22em;
+      @include breakpoint-down(medium) {
+        @include flex-center(column);
+        text-align: center;
+      }
+      p {
+        margin: 1.5rem 0;
+      }
+    }
+  
+    &_image {
+    //   background: url(images/illustration-intro.svg) no-repeat;
+    background: url(../SVGs/heroimg.svg) no-repeat;
+      background-size: 100%;
+      background-position: 117% 51%;
+      height: 29.3rem;
+      width: 37rem;
+    //    &::before{
+    //      content: '';
+    //      position: absolute;
+    //      height: 220%;
+    //      width: 100%;
+    //      top: 0;
+    //      right: 0;
+    //     //  border: 2px solid red;
+    //      background-position: top right;
+    //      z-index: -3;
+    //      background-position: 137% -21%;
+    //      background-size: 55%;
+    //    }
+    //    &::after{
+    //      content: '';
+    //      position: absolute;
+    //      height: 220%;
+    //      width: 100%;
+    //      top: 0;
+    //      right: 0;
+    //     //  border: 2px solid red;
+    //     //  background: url(images/bg-tablet-pattern.svg) no-repeat;
+    //     //  background-position: top right;
+    //      z-index: -3;
+    //      background-size: 55%;
+    //      background-position-x: -74%;
+    //      background-position-y: 140%;
+    //    }
+      @include breakpoint-down(medium) {
+        background-size: 109%;
+        background-size: contain;
+        background-position: center;
+        height: 19.3rem;
+        order: -1;
+        width: 92vw;
+        margin: 0.8rem 0;
+      }
+    }
+  }
+  
+  

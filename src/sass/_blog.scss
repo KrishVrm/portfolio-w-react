@@ -1,0 +1,44 @@
+.blog-page{
+    @include flex-box(column, center, center);
+    margin: 3rem 5rem;
+    & > h1{
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    @include breakpoint-down(medium){
+        margin: 3rem auto;
+    }
+    .blog-container{
+        display: grid;
+        grid-template-columns: 60% auto;
+        gap: 2rem;
+        justify-content: space-between;
+        @include breakpoint-down(small){
+            justify-content: center;
+        }
+        @include breakpoint-down(medium){
+            grid-template-columns: none;
+            grid-template-rows: 60% auto;
+            
+        }
+        .blog-content{
+            @include flex-box(column, center, flex-start);
+            gap: 12px;
+            p{
+                text-align: start;
+            }
+        }
+        .blog-pic{
+            height: 20rem;
+            width: 20rem;
+            background-image: url("../SVGs/Snap\ the\ moment-pana.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0 auto;
+            @include breakpoint-down(medium){
+                grid-row-start: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+.title-container{
+    @include flex-box(column, center, center);
+    gap: 5px;
+}
+
+.slider-section{
+    margin-bottom: 6rem;
+}
+
+.slider{
+    // @include flex-box(row, center, center);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 5rem));
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 5rem;
+    gap: 1.7rem;
+    @include breakpoint-down(medium){
+        margin: 3rem 2rem;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        background: $Dark-Blue;
+        height: 2px;
+        width: 100%;
+        top: -15px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        background: $Dark-Blue;
+        height: 2px;
+        width: 100%;
+        bottom: -15px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .slide{
+        background-size: 100%;
+        background-position: center center;
+        width: 5rem;
+        height: 5rem;
+        color: $Dark-Blue;
+        transition: all 200ms;
+        @media (hover: hover) and (pointer: fine){
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    #slide-1{
+        background: url(../SVGs/css3-alt-brands.svg) no-repeat center;
+    }
+    #slide-2{
+        background: url(../SVGs/react-brands.svg) no-repeat center;
+    }
+    
+    #slide-3{
+        background: url(../SVGs/html5-brands.svg) no-repeat center;
+    }
+
+    #slide-4{
+        background: url(../SVGs/figma-brands.svg) no-repeat center;
+    }
+
+    #slide-5{
+        background: url(../SVGs/sass-brands.svg) no-repeat center;
+    }
+
+    #slide-6{
+        background: url(../SVGs/git-brands.svg) no-repeat center;
+    }
+    #slide-7{
+        background: url(../SVGs/js-brands.svg) no-repeat center;
+    }
+    #slide-8{
+        background: url(../SVGs/bootstrap-brands.svg) no-repeat center;
+    }
+}

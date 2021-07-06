@@ -1,0 +1,45 @@
+.likeMe {
+    margin-top: 10rem;
+    @include flex-box(row, space-between, center);
+    background: $Violet;
+    padding: 3.5rem 5rem;
+    position: relative;
+    @include breakpoint-down(medium) {
+      text-align: center;
+      @include flex-box(column, center, center);
+      gap: 2rem;
+    }
+
+    .left, .right{
+        @include flex-box(column, flex-start, flex-start);
+        gap: 8px
+    }
+
+    .right{
+      @include breakpoint-down(medium){
+        align-items: flex-end;
+        h1{
+          text-align: end;
+        }
+      }
+    }
+
+    h1 {
+      color: white;
+      width: 24rem;
+  
+      @include breakpoint-down(medium) {
+        width: 80vw;
+        text-align: start;
+      }
+    }
+    h1,
+    button {
+      z-index: 3;
+    }
+    button{
+        background: white;
+        color: $Violet;
+    }
+  }
+  
